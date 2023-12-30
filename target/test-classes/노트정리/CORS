@@ -1,0 +1,72 @@
+개발일지  ㅇㄶㄴㅇㅎ
+나는 오늘도 개발을 한다
+
+CORS
+
+ ( 보안상 ) 동일 도메인 정책에 위배 되어서 그런것인데, 
+이것은 클라이언트 ( 즉, 작성자님 ) 께서 하실 수 있는 부분이 아니라
+데이터를 제공해주는 곳 ( 즉, 서버 ) 에서 처리를 해주어야 하는 부분입니다.
+근본적인 해결방법으로는 서버에서 CORS에 대한 제한을 풀거나 특정 호스트만 예외 처리하는 방법이 있을 듯하니 
+서비스를 제공해주는곳에 문의를 하시는게 빠를 듯 하네요 
+
+cors 발생
+dataType : ‘json’ js로 다른 도메인간의 ajax 요청하게되면
+
+(A도메인 -> B도메인)
+
+$.ajax({
+    url : "https://~",
+    dataType : 'json',               
+    method : 'get',
+    success : function(res){
+        console.log(res);
+    },
+    error : function(xhr, status, error){
+        alert(xhr.status, xhr.responseText, error);    
+    }
+});
+😢 크로스 도메인 브라우저 정책으로 CORS 에러 발생!!!
+
+
+
+CORS (Cross-origin resource sharing) 란?
+: 교차 출처 리소스 공유가 가능하도록 하는 기능
+
+보안상의 이유로 브라우저들이 다른 도메인에게 XHR 요청을 보내는 것을 제한한다.
+Ajax CORS 해결 방법
+방법1. 서버쪽 API에서 특정 URL에 대한 CORS 권한을 허용해줌
+header('Access-Control-Allow-Origin: *');
+방법2. jsonp 타입으로 요청
+방법3. CURL 서버쪽으로 통신
+jsonp
+cross-domain 이슈를 회피하기 위한 방법
+GET 방식만 가능
+서버에서 JSONP를 지원하지 않으면 사용 불가 (callback)
+$.ajax({
+    type : "GET"
+    , url : "https://~"
+    , dataType : 'jsonp'
+    , success : function(res) {
+        console.log(res);
+    }
+    , error : function(xhr, status, error){
+        alert(xhr.status, xhr.responseText, error);
+    }
+});
+서버쪽 API에서 jsonp에 대한 callback 처리 해줌
+API에서 callback 처리가 안돼있으면 CORB 에러 발생한다!
+$szCallback = $_REQUEST['callback'];
+if($szCallback) {
+       echo $szCallback . "(" . json_stringify($aJson) . ");\n"; 
+       exit;
+}
+
+
+https://bohyeon-n.github.io/deploy/web/cors.html
+https://evan-moon.github.io/2020/05/21/about-cors/
+https://bohyeon-n.github.io/deploy/web/cors.html
+https://velog.io/@fzerome240/AJAX-%ED%86%B5%EC%8B%A0-%EC%8B%9C-CORS-%EC%97%90%EB%9F%AC%EC%99%80-%ED%95%B4%EA%B2%B0%EB%B2%95
+
+
+open api 사용하여 데이터 가져오기
+https://jjungslife.tistory.com/43

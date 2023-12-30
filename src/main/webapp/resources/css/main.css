@@ -1,0 +1,92 @@
+body {
+	width: 1280x;
+	margin: 0px 0px 0px 0px; /* 위쪽, 오른쪽, 아래, 왼쪽 */
+	//background-color: green;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#titleDV{
+	width:700px;
+	height:20px;	
+	float:left;
+}
+
+#logininfo{
+	width:324px;
+	height:20px;	
+	/*background-color: yellow;	*/
+	float:left;
+	text-align:right;
+	
+}
+header{
+	width:1280px;
+	height:120px;
+	padding-top:18px;
+	padding-left:10px;
+	vertical-align: top;
+	Box-sizing:border-box;
+	background-color: #1ebd9d;	
+	float:left;
+	
+}
+
+a{
+	text-decoration:  none;
+}
+#menuSide{
+	width:280px;
+	height:800px;
+	Box-sizing:border-box;
+	float:left;
+}
+section{
+	width:776px;
+	background-color: blue;
+	height:1000px;
+	Box-sizing:border-box;
+	float:left;
+}
+#loginDV{
+	width:224px;
+	background-color: gray;
+	Box-sizing:border-box;
+	height:100px;
+	float:left;
+	
+}
+
+#loginFrm, #loginInfohome{
+	width:224px;
+	text-align: center;
+	padding-top: 20px;
+	Box-sizing:border-box;
+}
+
+#loginFrm td{
+	text-align: center;
+}
+
+#zzz{
+	width:224px;
+	background-color: yellow;
+	Box-sizing:border-box;
+	height:300px;
+	float:left;
+	
+}
+#loginCenter{
+	width:1280px;
+	height: 400px;
+	padding-top:100px;
+	text-align:center;
+	background-image: url("../img/loginBak.jpg");
+
+}
+#loginFrm{
+	/*background-color: red;*/
+	display:inline-block;
+	width:220px;
+	margin: 0 auto;
+}

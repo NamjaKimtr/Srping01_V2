@@ -1,0 +1,14 @@
+Junit이란?
+
+Java에서 독립된 단위테스트를 지원해주는 프레임워크
+
+
+
+Spring-Test란?
+
+@RunWith/@ContextConfiguration 등의 어노테이션을 활용하여
+
+Spring Framework에서 조금 더 편하게 테스트를 지원할 수 있게 해준다
+
+
+https://mangkyu.tistory.com/144

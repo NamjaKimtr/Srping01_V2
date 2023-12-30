@@ -1,0 +1,23 @@
+
+create table board(
+num number primary key,
+name varchar2(10),
+email varchar2(15),
+title varchar2(100),
+content varchar2(100),
+pass varchar2(8),
+cnt number(1) default 1,
+indate timestamp default sysdate);
+
+create sequence board_cnt;
+
+create table member2(
+id varchar2(8) primary key,
+pass varchar2(8),
+name varchar2(10),
+levels varchar2(10),
+enabled varchar2(1),
+point number(3)
+);
+
+
