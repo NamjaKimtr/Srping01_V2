@@ -207,7 +207,14 @@
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 			<version>1.16</version>
 		</dependency>
-
+		
+		<!-- Lombok 라이브러리 추가 .. 이것은 plugin도 추가 해야 함 -->
+		<dependency>
+    		<groupId>org.projectlombok</groupId>
+    		<artifactId>lombok</artifactId>
+   			<version>1.18.30</version>
+    		<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -249,6 +256,8 @@
 					<mainClass>org.test.int1.Main</mainClass>
 				</configuration>
 			</plugin>
+			
+	
 		</plugins>
 	</build>
 </project>

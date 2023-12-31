@@ -19,15 +19,19 @@ import com.human.util.FileDataUtil;
 import com.human.vo.BoardVO;
 import com.human.vo.PageVO;
 
-@Controller   //@RequiredArgsConstructor
+import lombok.RequiredArgsConstructor;
+
+@Controller   
+@RequiredArgsConstructor  // lombok 어노테이션은 NotNull이거나 final이 붙은 변수들에 대해 생성자를 만들어주는 기능을 제공하고 있다.
 public class BbsController {
-	@Inject
-	private IF_boardService bsrv;
-	@Inject
-	private FileDataUtil fileDataUtil;
+	//@Inject
+	private final IF_boardService bsrv;
+	//@Inject
+	private final FileDataUtil fileDataUtil;
 	
 	@RequestMapping(value = "/bbswrAction", method = RequestMethod.POST)
 	public String WrAction(Locale locale, Model model, BoardVO bvo, MultipartFile[] file) throws Exception{
+		System.out.println(bvo.toString());
 		// 객체로 받을 때는 파라미터이름과 객체의  변수의 이름이 일치하고 getter, setter가 있어야 한다. > 자동매핑
 		//System.out.println(bvo.getName() +" -- 디버깅용도");
 		//System.out.println(file.getOriginalFilename() +"--- 첨부파일 디버깅");

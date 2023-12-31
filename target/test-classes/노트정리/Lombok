@@ -1,1 +1,19 @@
-https://mangkyu.tistory.com/155
+설치 : https://bmangrok.tistory.com/entry/Spring-%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4%EC%97%90-Lombok-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4-%EB%A9%94%EB%89%B4-%EB%B0%8F-Maven%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EA%B0%84%ED%8E%B8%ED%95%98%EA%B2%8C
+
+https://mangkyu.tistory.com/155  // @RequiredArgsConstructor
+
+
+
+
+설치하기
+https://binit.tistory.com/21
+
+
+
+https://projectlombok.org  - download 버전확인
+specify location으로 수동으로 IDE경로를 설정할 수 있음
+
+설치 후
+lombok.jar 프로젝트에 추가하기  - pom.xml  -version 맞추기
+ide 재시작하기
+프로젝트 리빌드 하기  maven update project
