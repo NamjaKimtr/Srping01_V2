@@ -39,6 +39,12 @@ public class HomeController {
 		
 		return "home";
 	}
+	
+	@RequestMapping(value = "/toserver", method = RequestMethod.GET)
+	public String toserver(Locale locale, Model model) {
+		
+		return "/socket/webchat";
+	}
 	/*
 	@RequestMapping(value = "/test1", method = RequestMethod.GET)
 	public String test1(Locale locale, Model model, HttpServletRequest request) {	
